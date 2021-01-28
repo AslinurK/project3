@@ -18,6 +18,10 @@ routes.get('/status', (req, res) => {
 //TODO: ApprovalController
 //TODO: RejectionController
 
+//Registration
+routes.post('/registration/:eventId', RegistrationController.create)
+routes.get('/registration/:registration_id', RegistrationController.getRegistration)
+
 //Login
 routes.post('/login', LoginController.store)
 
