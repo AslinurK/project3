@@ -14,11 +14,12 @@ routes.get('/', (req, res) => {
 
 
 //event
-routes.post('/event')
+routes.post('/event', upload.single("thumbnail"), EventController.createEvent)
 
 
 //user
-routes.post('/register', UserController.store)
+routes.post('/user/register', UserController.createUser)
 routes.get('/user/:userId', UserController.getUserById)
+
 
 module.exports = routes
