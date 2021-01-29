@@ -86,7 +86,7 @@ export default function EventsPage() {
                 </FormGroup>
                 <FormGroup>
                     <Label>Event price: </Label>
-                    <Input id="price" type="text" value={price} placeholder={'Event Price $0.00'} onChange={(evt) => setPrice(evt.target.value)} />
+                    <Input id="price" type="text" value={price} placeholder={'Event Price 0.00'} onChange={(evt) => setPrice(evt.target.value)} />
                 </FormGroup>
                 <FormGroup>
                     <Label>Event date: </Label>
