@@ -1,4 +1,5 @@
-import React, { useState, useMemo } from 'react';
+
+import React, { useState, useMemo, useEffect } from 'react';
 import api from '../../services/api';
 import { Alert, Container, Button, Form, FormGroup, Input, Label, DropdownItem, DropdownMenu, DropdownToggle, ButtonDropdown } from 'reactstrap';
 import cameraIcon from '../../assets/camera.png'
@@ -14,6 +15,11 @@ export default function EventsPage({ history }) {
     const [error, setError] = useState(false)
     const [success, setSuccess] = useState(false)
     const [dropdownOpen, setOpen] = useState(false);
+    const user = localStorage.getItem('user');
+
+    useEffect(() => {
+        if (!user) history.push('/login');
+    }, [])
 
     const toggle = () => setOpen(!dropdownOpen);
 
@@ -23,7 +29,6 @@ export default function EventsPage({ history }) {
 
     const submitHandler = async (evt) => {
         evt.preventDefault()
-        const user_id = localStorage.getItem('user');
 
         const eventData = new FormData();
 
@@ -43,10 +48,11 @@ export default function EventsPage({ history }) {
                 date !== "" &&
                 thumbnail !== null
             ) {
-                await api.post("/event", eventData, { headers: { user_id } })
+                await api.post("/event", eventData, { headers: { user } })
                 setSuccess(true)
                 setTimeout(() => {
                     setSuccess(false)
+                    history.push("/")
                 }, 2000)
             } else {
                 setError(true)
@@ -62,7 +68,6 @@ export default function EventsPage({ history }) {
 
     const sportEventHandler = (sport) => setSport(sport);
 
-    console.log(sport)
     return (
         <Container>
             <h2>Create your Event</h2>
@@ -96,9 +101,9 @@ export default function EventsPage({ history }) {
                             <Button id="caret" value={sport} disabled>{sport}</Button>
                             <DropdownToggle caret />
                             <DropdownMenu>
-                                <DropdownItem onClick={() => sportEventHandler('running')}>running</DropdownItem>
-                                <DropdownItem onClick={() => sportEventHandler('cycling')}>cycling</DropdownItem>
-                                <DropdownItem onClick={() => sportEventHandler('swimming')}>swimming</DropdownItem>
+                                <DropdownItem onClick={() => sportEventHandler('Strength')}>Outdoor Strength</DropdownItem>
+                                <DropdownItem onClick={() => sportEventHandler('Yoga')}>Outdoor Yoga</DropdownItem>
+                                <DropdownItem onClick={() => sportEventHandler('Cycling')}>Virtual Fitness Class</DropdownItem>
                             </DropdownMenu>
                         </ButtonDropdown>
                     </FormGroup>
@@ -108,7 +113,7 @@ export default function EventsPage({ history }) {
                 </FormGroup>
                 <FormGroup>
                     <Button className="secondary-btn" onClick={() => history.push("/")}>
-                        Dashboard
+                        Cancel
                     </Button>
                 </FormGroup>
             </Form>

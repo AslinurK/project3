@@ -1,3 +1,5 @@
+
+
 function verifyToken(req, res, next) {
 	const bearerToken = req.header('user')
 	if (typeof bearerToken !== 'undefined') {

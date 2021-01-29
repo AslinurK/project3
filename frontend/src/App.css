@@ -14,7 +14,7 @@ body,
 }
 
 body {
-    background: rgba(0, 0, 0, 0.5) url("./assets/background.jpg") no-repeat;
+    background: rgba(0, 0, 0, 0.5) url("./assets/yoga.jpg") no-repeat;
     background-size: cover;
     -webkit-font-smoothing: antialiased !important;
 }
@@ -95,4 +95,11 @@ button {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 5rem;
+  color: #ff5151;
+  font-style: italic;
+  
 }
