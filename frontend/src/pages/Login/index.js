@@ -16,7 +16,7 @@ export default function Login({ history }) {
         try {
             if (userId) {
                 localStorage.setItem('user', userId)
-                history.push('/dashboard')
+                history.push('/')
             } else {
                 const { message } = response.data
                 setError(true)
@@ -27,7 +27,8 @@ export default function Login({ history }) {
                 }, 2000)
             }
         } catch (error) {
-
+            setError(true)
+            setErrorMessage("Error, the server returned an error")
         }
     }
 
