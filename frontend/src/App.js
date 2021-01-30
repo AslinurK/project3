@@ -8,8 +8,8 @@ function App() {
   return (
     <ContextWrapper>
       <Container>
-        <h1>WellnessLife</h1>
-        <h2>Organize in-person and online classes, Build a community, Stay safe & strong!</h2>
+        <h1>EZ WELLNESS</h1>
+        <h2>Class management for socially distanced in-person and online classes</h2>
         <div className="content">
           <Routes />
         </div>

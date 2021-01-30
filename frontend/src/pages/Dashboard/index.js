@@ -167,11 +167,11 @@ export default function Dashboard({ history }) {
                         Filter
                     </DropdownToggle>
                     <DropdownMenu>
-                        <DropdownItem onClick={() => filterHandler(null)} active={rSelected === null} >All Sports</DropdownItem>
+                        <DropdownItem onClick={() => filterHandler(null)} active={rSelected === null} >All Events</DropdownItem>
                         <DropdownItem onClick={myEventsHandler} active={rSelected === 'myevents'} >My Events</DropdownItem>
-                        <DropdownItem onClick={() => filterHandler("running")} active={rSelected === 'running'} >Running</DropdownItem>
-                        <DropdownItem onClick={() => filterHandler("cycling")} active={rSelected === 'cycling'} >Cycling</DropdownItem>
-                        <DropdownItem color="primary" onClick={() => filterHandler('swimming')} active={rSelected === 'swimming'} >Swimming</DropdownItem>
+                        <DropdownItem onClick={() => filterHandler("running")} active={rSelected === 'running'} >Outdoor Strength</DropdownItem>
+                        <DropdownItem onClick={() => filterHandler("cycling")} active={rSelected === 'cycling'} >Outdoor Yoga</DropdownItem>
+                        <DropdownItem color="primary" onClick={() => filterHandler('swimming')} active={rSelected === 'swimming'} >Virtual Classes</DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
             </div>
