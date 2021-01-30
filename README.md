@@ -32,12 +32,19 @@ Here are the steps involved.
 This is a full-stack application built from scratch using the MERN STACK (MongoDB, Express, React.js and Nodejs).
 
 -User registration and authentication 
+
 -Hashing password for security
+
 -Session control
+
 -CRUD operations (create, read, update and delete)
+
 -Search for events using filters
+
 Sign up for events in order to participate
+
 -Upload images to the server
+
 -Website notification using web sockets (in order to approve or refuse the Event Sign Up request)
 
 
