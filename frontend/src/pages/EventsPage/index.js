@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo, useEffect } from 'react';
 import api from '../../services/api';
 import { Alert, Container, Button, Form, FormGroup, Input, Label, DropdownItem, DropdownMenu, DropdownToggle, ButtonDropdown } from 'reactstrap';
@@ -101,9 +100,9 @@ export default function EventsPage({ history }) {
                             <Button id="caret" value={sport} disabled>{sport}</Button>
                             <DropdownToggle caret />
                             <DropdownMenu>
-                                <DropdownItem onClick={() => sportEventHandler('Strength')}>Outdoor Strength</DropdownItem>
-                                <DropdownItem onClick={() => sportEventHandler('Yoga')}>Outdoor Yoga</DropdownItem>
-                                <DropdownItem onClick={() => sportEventHandler('Cycling')}>Virtual Fitness Class</DropdownItem>
+                                <DropdownItem onClick={() => sportEventHandler('running')}>Outdoor Strength</DropdownItem>
+                                <DropdownItem onClick={() => sportEventHandler('cycling')}>Outdoor Yoga</DropdownItem>
+                                <DropdownItem onClick={() => sportEventHandler('swimming')}>Virtual Classes</DropdownItem>
                             </DropdownMenu>
                         </ButtonDropdown>
                     </FormGroup>
