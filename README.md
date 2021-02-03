@@ -47,5 +47,33 @@ Sign up for events in order to participate
 
 -Website notification using web sockets (in order to approve or refuse the Event Sign Up request)
 
+## Deployment
+
+Create an account:
+
+![2021-02-02 22 59 25](https://user-images.githubusercontent.com/59800707/106696313-6ba8c380-65aa-11eb-895c-4618417f2e66.gif)
+
+
+Login:
+
+![2021-02-02 22 53 05](https://user-images.githubusercontent.com/59800707/106696107-f937e380-65a9-11eb-93ec-1273cbfcd37b.gif)
+
+
+Create event/upload picture:
+![2021-02-02 22 53 58](https://user-images.githubusercontent.com/59800707/106696126-0c4ab380-65aa-11eb-8c6d-a524fc6876ad.gif)
+
+
+Create event/select date:
+![2021-02-02 22 54 24](https://user-images.githubusercontent.com/59800707/106696149-1bc9fc80-65aa-11eb-9cd7-ae3eb9eb820e.gif)
+
+
+Manage your events:
+![2021-02-02 22 54 45](https://user-images.githubusercontent.com/59800707/106696155-1e2c5680-65aa-11eb-8e4b-d4f1836f43cb.gif)
+
+
+Approve or reject event requests:
+![2021-02-02 22 55 04](https://user-images.githubusercontent.com/59800707/106696157-208eb080-65aa-11eb-93c3-40b71f4e5136.gif)
+
+
 
 
